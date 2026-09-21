@@ -1,5 +1,5 @@
 import React from 'react';
-import { X, Shield, Skull, Dices, HelpCircle, AlertTriangle, EyeOff } from 'lucide-react';
+import { X, Shield, Skull, Dices, HelpCircle, AlertTriangle } from 'lucide-react';
 
 export default function RulesModal({ isOpen, onClose }) {
   // Prevent closing when clicking inside the modal content
@@ -43,49 +43,27 @@ export default function RulesModal({ isOpen, onClose }) {
             </ul>
           </div>
 
-          {/* Section: Survivors */}
-          <div className="rules-section-block survivals-block">
+          {/* Section: Objectives */}
+          <div className="rules-section-block">
             <h3>
               <Shield size={18} />
-              Objetivo: Supervivientes
+              Objetivos del juego
             </h3>
+            <p style={{ fontSize: '0.9rem', marginBottom: '4px' }}>
+              Tienes dos grandes objetivos que deberás cumplir a lo largo de la partida para lograr ganar.
+            </p>
             <ul className="rules-list">
               <li>
-                <strong>Punto de Partida:</strong> Comienzan en el <strong>Laboratorio</strong> (marcado con la cruz).
+                <strong>Supervivientes:</strong> Recorrer el tablero para recolectar los diferentes materiales y entregarlos al laboratorio.
               </li>
               <li>
-                <strong>Búsqueda:</strong> Deben recorrer las habitaciones del tablero buscando materiales para fabricar la cura.
-              </li>
-              <li>
-                <strong>Entrega Segura:</strong> Al conseguir un material, deben regresarlo al Laboratorio. El laboratorio es una zona 100% segura donde los Infectados no pueden ingresar.
-              </li>
-              <li>
-                <strong>Penalización de Entrega:</strong> El jugador que entregue un material deberá <strong>descansar 1 turno completo</strong> sin participar, reincorporándose en el siguiente.
-              </li>
-            </ul>
-          </div>
-
-          {/* Section: Infected */}
-          <div className="rules-section-block infected-block">
-            <h3>
-              <Skull size={18} />
-              Objetivo: Infectados
-            </h3>
-            <ul className="rules-list">
-              <li>
-                <strong>Punto de Partida:</strong> Comienzan en la <strong>Habitación Infectada</strong> (marcada con el símbolo de biohazard).
-              </li>
-              <li>
-                <strong>Contagio:</strong> Su fin es recorrer el tablero para infectar a todos los supervivientes antes de que completen la cura.
-              </li>
-              <li>
-                <strong>Sabotaje:</strong> Pueden robar materiales de cura del tablero y llevarlos a su <strong>Guarida</strong>. Esto obliga a los supervivientes a adentrarse en territorio peligroso si quieren recuperarlos.
+                <strong>Infectados:</strong> Contagiar a los supervivientes y sabotearlos tomando materiales del tablero para llevarlos a la Zona Cero.
               </li>
             </ul>
           </div>
 
           {/* Section: Infection rules */}
-          <div className="rules-section-block infected-block">
+          <div className="rules-section-block infection-block">
             <h3>
               <AlertTriangle size={18} />
               Reglas de Infección
@@ -115,24 +93,36 @@ export default function RulesModal({ isOpen, onClose }) {
             <div className="board-items">
               <div className="board-item-row">
                 <div className="board-item-icon">
-                  <HelpCircle size={20} color="var(--color-primary-light)" />
+                  <Shield size={20} color="var(--color-ice)" />
                 </div>
                 <div className="board-item-text">
-                  <div className="board-item-name">Casillas de Interrogación (?)</div>
+                  <div className="board-item-name">Laboratorio</div>
                   <div className="board-item-desc">
-                    Espacios donde los jugadores pueden caer múltiples veces. Al aterrizar en ellos, deben robar una carta aleatoria que puede beneficiar o perjudicar su camino.
+                    Habitación donde los supervivientes inician la partida, siendo el punto de entrega de los materiales (los infectados no podrán entrar).
                   </div>
                 </div>
               </div>
-              
+
               <div className="board-item-row">
                 <div className="board-item-icon">
-                  <EyeOff size={20} color="var(--color-slate)" />
+                  <Skull size={20} color="var(--color-steel)" />
                 </div>
                 <div className="board-item-text">
-                  <div className="board-item-name">Guarida Infectada</div>
+                  <div className="board-item-name">Zona Cero</div>
                   <div className="board-item-desc">
-                    El nido del virus. Zona de almacenamiento de materiales robados, altamente peligrosa y custodiada por los jugadores infectados.
+                    Habitación donde los infectados inician la partida, donde a la hora de sabotear, los materiales se resguardarán en este lugar (los supervivientes sí podrán entrar).
+                  </div>
+                </div>
+              </div>
+
+              <div className="board-item-row">
+                <div className="board-item-icon">
+                  <HelpCircle size={20} color="var(--color-aqua)" />
+                </div>
+                <div className="board-item-text">
+                  <div className="board-item-name">Casilla de evento</div>
+                  <div className="board-item-desc">
+                    Al caer en esta casilla toma una carta que puede ser para beneficio o pérdida.
                   </div>
                 </div>
               </div>

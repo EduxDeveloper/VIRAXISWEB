@@ -1094,6 +1094,10 @@ a:hover {
   color: var(--color-red-bright);
 }
 
+.rules-section-block.infection-block h3 {
+  color: var(--text-main);
+}
+
 .rules-list {
   list-style-type: none;
   display: flex;
@@ -1137,15 +1141,15 @@ a:hover {
 }
 
 .phase-card.active-phase {
-  border-color: var(--color-primary);
-  box-shadow: 0 0 10px rgba(18, 99, 132, 0.12);
+  border-color: var(--color-steel);
+  box-shadow: 0 0 10px rgba(84, 114, 141, 0.18);
 }
 
 .phase-num {
   font-family: var(--font-title);
   font-weight: 800;
   font-size: 1.2rem;
-  color: var(--color-primary-light);
+  color: var(--color-ice);
   margin-bottom: 4px;
 }
 
