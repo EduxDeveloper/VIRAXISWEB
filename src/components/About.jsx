@@ -18,7 +18,7 @@ export default function About() {
           </div>
           <span className="etymology-join">+</span>
           <div className="etymology-item etymology-item-end">
-            <span className="etymology-word">Axis</span>
+            <span className="etymology-word axis">Axis</span>
             <span className="etymology-hint">el eje</span>
           </div>
         </div>

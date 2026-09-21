@@ -137,7 +137,7 @@ export default function Players() {
             </div>
 
             {errors && (
-              <div style={{ display: 'flex', alignItems: 'center', gap: '8px', color: '#ff4d5a', backgroundColor: 'rgba(166, 23, 35, 0.1)', padding: '12px 16px', borderRadius: '8px', marginBottom: '24px', fontSize: '0.9rem', border: '1px solid rgba(166, 23, 35, 0.2)' }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '8px', color: 'var(--color-red-bright)', backgroundColor: 'rgba(198, 28, 30, 0.1)', padding: '12px 16px', borderRadius: '8px', marginBottom: '24px', fontSize: '0.9rem', border: '1px solid rgba(198, 28, 30, 0.25)' }}>
                 <AlertCircle size={18} style={{ flexShrink: 0 }} />
                 <span>{errors}</span>
               </div>
@@ -203,7 +203,7 @@ export default function Players() {
             {/* Infected Column */}
             <div className="team-column infected">
               <div className="team-header">
-                <Skull size={24} color="#ff3c4d" />
+                <Skull size={24} color="var(--color-infected-glow)" />
                 <h3>Infectados</h3>
               </div>
               <div className="players-list">

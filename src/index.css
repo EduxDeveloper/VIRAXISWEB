@@ -2,26 +2,43 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;600;700;800;900&display=swap');
 
 :root {
-  /* Color Palette */
-  --color-primary: #A61723;
-  --color-primary-light: #A61731;
-  --color-slate: #5A5A73;
-  --color-bg: #0D0D0D;
-  --color-surface: #141419;
-  --color-surface-hover: #1e1e24;
-  --color-border: #24242e;
-  --color-border-focus: #A61723;
-  
+  /* Palette: logo */
+  --color-black: #08080A;
+  --color-teal: #126384;
+  --color-steel: #54728D;
+  --color-white: #FFFFFF;
+
+  /* Palette: extra */
+  --color-red: #C61C1E;
+  --color-red-bright: #DB1D2B;
+  --color-maroon: #A31922;
+  --color-ice: #BFDAF3;
+  --color-blue: #426AA1;
+  --color-deep-teal: #0B3C5D;
+  --color-navy: #1A1F32;
+  --color-aqua: #1C7B8C;
+
+  /* Semantic */
+  --color-primary: var(--color-teal);
+  --color-primary-light: var(--color-aqua);
+  --color-brand: rgba(84, 114, 141, 1);
+  --color-slate: var(--color-blue);
+  --color-bg: var(--color-black);
+  --color-surface: var(--color-navy);
+  --color-surface-hover: #242b44;
+  --color-border: var(--color-deep-teal);
+  --color-border-focus: var(--color-teal);
+
   /* Status Colors */
-  --color-infected: #A61723;
-  --color-survivor: #5A5A73;
-  --color-survivor-glow: #7a7a99;
-  --color-infected-glow: #e62234;
-  
+  --color-infected: var(--color-red);
+  --color-survivor: var(--color-blue);
+  --color-survivor-glow: var(--color-ice);
+  --color-infected-glow: var(--color-red-bright);
+
   /* Text Colors */
-  --text-main: #F5F5F7;
-  --text-muted: #A0A0B0;
-  --text-dark: #0D0D0D;
+  --text-main: #F4F7FA;
+  --text-muted: #9BB4C6;
+  --text-dark: var(--color-black);
 
   /* Font Families */
   --font-title: 'Montserrat', sans-serif;
@@ -31,8 +48,9 @@
   --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.5);
   --shadow-md: 0 4px 20px rgba(0, 0, 0, 0.7);
   --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.9);
-  --shadow-primary-glow: 0 0 15px rgba(166, 23, 35, 0.4);
-  --shadow-survivor-glow: 0 0 15px rgba(90, 90, 115, 0.4);
+  --shadow-primary-glow: 0 0 15px rgba(18, 99, 132, 0.45);
+  --shadow-survivor-glow: 0 0 15px rgba(66, 106, 161, 0.4);
+  --shadow-infected-glow: 0 0 15px rgba(198, 28, 30, 0.4);
 }
 
 /* Base resets & styles */
@@ -69,7 +87,7 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #24242e;
+  background: var(--color-deep-teal);
   border-radius: 4px;
 }
 
@@ -114,7 +132,7 @@ a {
 }
 
 a:hover {
-  color: #ff3344;
+  color: var(--color-ice);
 }
 
 /* Animations */
@@ -124,15 +142,15 @@ a:hover {
 }
 
 @keyframes pulseGlow {
-  0% { box-shadow: 0 0 10px rgba(166, 23, 35, 0.3); }
-  50% { box-shadow: 0 0 25px rgba(166, 23, 35, 0.7); }
-  100% { box-shadow: 0 0 10px rgba(166, 23, 35, 0.3); }
+  0% { box-shadow: 0 0 10px rgba(18, 99, 132, 0.3); }
+  50% { box-shadow: 0 0 25px rgba(18, 99, 132, 0.7); }
+  100% { box-shadow: 0 0 10px rgba(18, 99, 132, 0.3); }
 }
 
 @keyframes pulseGlowSurvivor {
-  0% { box-shadow: 0 0 10px rgba(90, 90, 115, 0.3); }
-  50% { box-shadow: 0 0 25px rgba(90, 90, 115, 0.7); }
-  100% { box-shadow: 0 0 10px rgba(90, 90, 115, 0.3); }
+  0% { box-shadow: 0 0 10px rgba(66, 106, 161, 0.3); }
+  50% { box-shadow: 0 0 25px rgba(191, 218, 243, 0.5); }
+  100% { box-shadow: 0 0 10px rgba(66, 106, 161, 0.3); }
 }
 
 @keyframes fadeOutBlur {
@@ -158,8 +176,8 @@ a:hover {
 }
 
 @keyframes logoPulse {
-  0%, 100% { transform: scale(1); filter: drop-shadow(0 0 8px rgba(166, 23, 35, 0.5)); }
-  50% { transform: scale(1.05); filter: drop-shadow(0 0 25px rgba(166, 23, 35, 0.9)); }
+  0%, 100% { transform: scale(1); filter: drop-shadow(0 0 8px rgba(18, 99, 132, 0.5)); }
+  50% { transform: scale(1.05); filter: drop-shadow(0 0 25px rgba(18, 99, 132, 0.9)); }
 }
 
 @keyframes slideInRight {
@@ -184,7 +202,7 @@ a:hover {
 /* Header & Nav */
 .header {
   border-bottom: 1px solid var(--color-border);
-  background-color: rgba(13, 13, 13, 0.9);
+  background-color: rgba(8, 8, 10, 0.92);
   backdrop-filter: blur(12px);
   position: sticky;
   top: 0;
@@ -206,7 +224,9 @@ a:hover {
 }
 
 .logo-img-small {
-  height: 40px;
+  height: 28px;
+  width: auto;
+  max-width: 168px;
   object-fit: contain;
 }
 
@@ -215,10 +235,10 @@ a:hover {
   font-size: 1.5rem;
   font-weight: 900;
   letter-spacing: 0.1em;
-  background: linear-gradient(135deg, var(--color-primary-light), #ff4d5a);
+  background: linear-gradient(135deg, var(--color-steel), var(--color-aqua));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  text-shadow: 0 0 20px rgba(166, 23, 35, 0.2);
+  text-shadow: 0 0 20px rgba(18, 99, 132, 0.2);
 }
 
 .app-main {
@@ -246,8 +266,8 @@ a:hover {
 
 .hamburger-btn:hover,
 .hamburger-btn.open {
-  border-color: rgba(166, 23, 35, 0.5);
-  background-color: rgba(166, 23, 35, 0.12);
+  border-color: rgba(18, 99, 132, 0.6);
+  background-color: rgba(18, 99, 132, 0.16);
 }
 
 .hamburger-line {
@@ -293,8 +313,8 @@ a:hover {
   right: 0;
   width: min(320px, 86vw);
   height: 100%;
-  background-color: #16161d;
-  border-left: 1px solid rgba(166, 23, 35, 0.4);
+  background-color: var(--color-navy);
+  border-left: 1px solid rgba(18, 99, 132, 0.45);
   z-index: 410;
   padding: 96px 24px 32px;
   display: flex;
@@ -317,7 +337,7 @@ a:hover {
   font-weight: 700;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: var(--color-primary-light);
+  color: var(--color-steel);
   margin-bottom: 8px;
 }
 
@@ -343,8 +363,8 @@ a:hover {
 
 .nav-btn.active {
   color: var(--text-main);
-  background-color: rgba(166, 23, 35, 0.15);
-  border-color: rgba(166, 23, 35, 0.4);
+  background-color: rgba(18, 99, 132, 0.18);
+  border-color: rgba(28, 123, 140, 0.5);
   box-shadow: var(--shadow-primary-glow);
 }
 
@@ -369,8 +389,8 @@ a:hover {
 
 .splash-logo-container {
   position: relative;
-  width: 280px;
-  height: 280px;
+  width: min(320px, 86vw);
+  height: 140px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -387,7 +407,7 @@ a:hover {
 .splash-loader {
   width: 60px;
   height: 3px;
-  background: #141419;
+  background: var(--color-navy);
   border-radius: 10px;
   overflow: hidden;
   position: relative;
@@ -439,7 +459,7 @@ a:hover {
 
 .about-kicker {
   font-family: var(--font-title);
-  color: var(--color-primary-light);
+  color: var(--color-aqua);
   font-size: 0.72rem;
   font-weight: 700;
   letter-spacing: 0.2em;
@@ -502,8 +522,12 @@ a:hover {
   line-height: 1;
 }
 
+.etymology-word.axis {
+  color: var(--color-steel);
+}
+
 .etymology-word.virus {
-  color: var(--color-primary-light);
+  color: var(--color-maroon);
 }
 
 .etymology-hint {
@@ -548,11 +572,11 @@ a:hover {
   letter-spacing: 0.1em;
   text-transform: uppercase;
   margin-bottom: 8px;
-  color: var(--text-main);
+  color: var(--color-blue);
 }
 
 .faction-name.infected {
-  color: var(--color-primary-light);
+  color: var(--color-infected);
 }
 
 .faction-item p {
@@ -568,14 +592,14 @@ a:hover {
   transform: translateX(-50%);
   width: 500px;
   height: 300px;
-  background: radial-gradient(circle, rgba(166, 23, 33, 0.15) 0%, rgba(0,0,0,0) 70%);
+  background: radial-gradient(circle, rgba(18, 99, 132, 0.28) 0%, rgba(0,0,0,0) 70%);
   z-index: -1;
   pointer-events: none;
 }
 
 .hero-subtitle {
   font-family: var(--font-title);
-  color: var(--color-primary-light);
+  color: var(--color-aqua);
   font-size: 1.1rem;
   font-weight: 700;
   letter-spacing: 0.2em;
@@ -591,6 +615,10 @@ a:hover {
   text-shadow: 0 4px 12px rgba(0, 0, 0, 0.8);
 }
 
+.hero-brand {
+  color: rgba(84, 114, 141, 1);
+}
+
 .hero-desc {
   max-width: 680px;
   margin: 0 auto 40px;
@@ -599,7 +627,7 @@ a:hover {
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, var(--color-primary), var(--color-primary-light));
+  background: linear-gradient(135deg, var(--color-teal), var(--color-aqua));
   color: white;
   border: none;
   font-family: var(--font-title);
@@ -608,7 +636,7 @@ a:hover {
   padding: 14px 28px;
   border-radius: 8px;
   cursor: pointer;
-  box-shadow: 0 4px 15px rgba(166, 23, 35, 0.4);
+  box-shadow: 0 4px 15px rgba(18, 99, 132, 0.45);
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   display: inline-flex;
   align-items: center;
@@ -617,7 +645,7 @@ a:hover {
 
 .btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(166, 23, 35, 0.6);
+  box-shadow: 0 8px 25px rgba(28, 123, 140, 0.55);
   filter: brightness(1.1);
 }
 
@@ -679,8 +707,8 @@ a:hover {
 }
 
 .selector-option.active {
-  background: rgba(166, 23, 35, 0.08);
-  border-color: var(--color-primary);
+  background: rgba(18, 99, 132, 0.12);
+  border-color: var(--color-teal);
   box-shadow: var(--shadow-primary-glow);
 }
 
@@ -741,8 +769,8 @@ a:hover {
 
 .input-field:focus {
   outline: none;
-  border-color: var(--color-primary);
-  box-shadow: 0 0 10px rgba(166, 23, 35, 0.25);
+  border-color: var(--color-teal);
+  box-shadow: 0 0 10px rgba(18, 99, 132, 0.28);
   background-color: var(--color-surface);
 }
 
@@ -784,7 +812,7 @@ a:hover {
 
 .team-column.survivors:hover {
   box-shadow: var(--shadow-survivor-glow);
-  border-color: rgba(90, 90, 115, 0.4);
+  border-color: rgba(66, 106, 161, 0.5);
 }
 
 .team-column.infected {
@@ -792,8 +820,8 @@ a:hover {
 }
 
 .team-column.infected:hover {
-  box-shadow: var(--shadow-primary-glow);
-  border-color: rgba(166, 23, 35, 0.4);
+  box-shadow: var(--shadow-infected-glow);
+  border-color: rgba(198, 28, 30, 0.45);
 }
 
 .team-header {
@@ -815,7 +843,7 @@ a:hover {
 }
 
 .team-column.infected .team-header h3 {
-  color: #ff3c4d;
+  color: var(--color-red-bright);
 }
 
 .players-list {
@@ -865,15 +893,15 @@ a:hover {
 }
 
 .team-column.survivors .player-avatar {
-  background-color: rgba(90, 90, 115, 0.15);
-  color: var(--color-survivor-glow);
-  border: 1px solid rgba(90, 90, 115, 0.3);
+  background-color: rgba(66, 106, 161, 0.18);
+  color: var(--color-ice);
+  border: 1px solid rgba(191, 218, 243, 0.35);
 }
 
 .team-column.infected .player-avatar {
-  background-color: rgba(166, 23, 35, 0.15);
-  color: #ff3c4d;
-  border: 1px solid rgba(166, 23, 35, 0.3);
+  background-color: rgba(198, 28, 30, 0.16);
+  color: var(--color-red-bright);
+  border: 1px solid rgba(198, 28, 30, 0.35);
 }
 
 .player-name-display {
@@ -893,13 +921,13 @@ a:hover {
 }
 
 .team-column.survivors .role-badge {
-  background-color: rgba(90, 90, 115, 0.2);
-  color: #c5c5d9;
+  background-color: rgba(66, 106, 161, 0.22);
+  color: var(--color-ice);
 }
 
 .team-column.infected .role-badge {
-  background-color: rgba(166, 23, 35, 0.25);
-  color: #ff8c95;
+  background-color: rgba(198, 28, 30, 0.22);
+  color: #f0a0a4;
 }
 
 /* Floating Instruction Toast Widget */
@@ -924,7 +952,7 @@ a:hover {
 
 .toast-help-widget:hover {
   background-color: var(--color-surface-hover);
-  border-color: rgba(166, 23, 35, 0.5);
+  border-color: rgba(18, 99, 132, 0.55);
 }
 
 .toast-help-content {
@@ -981,7 +1009,7 @@ a:hover {
   width: 90%;
   max-width: 680px;
   max-height: 85vh;
-  box-shadow: var(--shadow-lg), 0 0 30px rgba(166, 23, 35, 0.15);
+  box-shadow: var(--shadow-lg), 0 0 30px rgba(18, 99, 132, 0.18);
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -1059,11 +1087,11 @@ a:hover {
 }
 
 .rules-section-block.survivals-block h3 {
-  color: #8b8bb3;
+  color: var(--color-ice);
 }
 
 .rules-section-block.infected-block h3 {
-  color: #ff4d5a;
+  color: var(--color-red-bright);
 }
 
 .rules-list {
@@ -1110,7 +1138,7 @@ a:hover {
 
 .phase-card.active-phase {
   border-color: var(--color-primary);
-  box-shadow: 0 0 10px rgba(166, 23, 35, 0.1);
+  box-shadow: 0 0 10px rgba(18, 99, 132, 0.12);
 }
 
 .phase-num {
@@ -1180,7 +1208,7 @@ a:hover {
 .footer {
   border-top: 1px solid var(--color-border);
   padding: 40px 0;
-  background-color: rgba(10, 10, 12, 0.8);
+  background-color: rgba(26, 31, 50, 0.85);
   margin-top: auto;
   text-align: center;
 }
@@ -1283,7 +1311,8 @@ a:hover {
   }
 
   .logo-img-small {
-    height: 32px;
+    height: 24px;
+    max-width: 140px;
   }
 
   .hero-title {

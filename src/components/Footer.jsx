@@ -7,10 +7,10 @@ export default function Footer({ onOpenRules }) {
     <footer className="footer">
       <div className="container footer-content">
         <div className="footer-logo">
-          <img 
-            src="/imagenes/Logo viraxis.png" 
-            alt="Viraxis Logo" 
-            style={{ height: '40px', objectFit: 'contain' }}
+          <img
+            src="/imagenes/logoPaginaNuevo.png"
+            alt="Viraxis Logo"
+            style={{ height: '28px', width: 'auto', maxWidth: '180px', objectFit: 'contain' }}
           />
         </div>
         
@@ -22,8 +22,8 @@ export default function Footer({ onOpenRules }) {
           <button 
             onClick={onOpenRules}
             style={{
-              background: 'rgba(166, 23, 35, 0.1)',
-              border: '1px solid rgba(166, 23, 35, 0.3)',
+              background: 'rgba(18, 99, 132, 0.14)',
+              border: '1px solid rgba(28, 123, 140, 0.4)',
               color: 'var(--text-main)',
               fontFamily: 'var(--font-title)',
               fontSize: '0.85rem',

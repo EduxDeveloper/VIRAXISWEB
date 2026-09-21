@@ -49,7 +49,7 @@ export default function App() {
         <div className="container header-container">
           <div className="logo-link" onClick={() => goTo('home')}>
             <img
-              src="/imagenes/Logo viraxis.png"
+              src="/imagenes/logoPaginaNuevo.png"
               alt="Viraxis Logo"
               className="logo-img-small"
             />

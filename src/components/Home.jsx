@@ -8,7 +8,7 @@ export default function Home({ onStart }) {
         <div className="hero-glow"></div>
         <p className="hero-subtitle animate-float">Juego de Mesa Táctico</p>
         <h1 className="hero-title">
-          BIENVENIDO A <span style={{ color: 'var(--color-primary-light)' }}>VIRAXIS</span>
+          BIENVENIDO A <span className="hero-brand">VIRAXIS</span>
         </h1>
         <p className="hero-desc">
           Un tenso escenario hospitalario donde la estrategia, la cooperación y el contagio chocan. ¿Completarás la cura o propagarás la epidemia?

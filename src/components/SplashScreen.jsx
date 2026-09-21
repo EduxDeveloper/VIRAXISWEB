@@ -24,7 +24,7 @@ export default function SplashScreen({ onFinished }) {
     <div className={`splash-overlay ${isFading ? 'fade-out' : ''}`}>
       <div className="splash-logo-container">
         <img 
-          src="/imagenes/Logo viraxis.png" 
+          src="/imagenes/logoPaginaNuevo.png" 
           alt="Viraxis Logo" 
           className="splash-logo" 
         />
@@ -32,7 +32,7 @@ export default function SplashScreen({ onFinished }) {
       <div className="splash-loader">
         <div className="splash-loader-bar"></div>
       </div>
-      <p style={{ marginTop: '16px', fontSize: '0.85rem', letterSpacing: '0.2em', textTransform: 'uppercase', color: 'var(--color-primary-light)', fontWeight: '600' }}>
+      <p style={{ marginTop: '16px', fontSize: '0.85rem', letterSpacing: '0.2em', textTransform: 'uppercase', color: 'var(--color-steel)', fontWeight: '600' }}>
         Cargando Infección...
       </p>
     </div>
