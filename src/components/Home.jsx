@@ -6,7 +6,7 @@ export default function Home({ onStart }) {
     <div className="container home-page animate-fade-in">
       <div className="hero-section">
         <div className="hero-glow"></div>
-        <p className="hero-subtitle animate-float">Juego de Mesa Táctico</p>
+        <p className="hero-subtitle animate-float">Juego de Mesa Estratégico</p>
         <h1 className="hero-title">
           BIENVENIDO A <span className="hero-brand">VIRAXIS</span>
         </h1>
