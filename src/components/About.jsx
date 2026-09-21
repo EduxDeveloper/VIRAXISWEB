@@ -24,12 +24,13 @@ export default function About() {
         </div>
 
         <p>
-          El nombre surge de la combinación de las palabras <strong>Virus</strong> y <strong>Axis</strong>.
-          El término <em>virus</em> hace referencia al agente infeccioso que desencadena la historia.
-          Por su parte, <em>axis</em> es un término biológico para denominar una estructura que representa un punto de origen o eje en el cuerpo.
+          Todo comenzó en un hospital donde se desarrollaba un proyecto experimental para crear un tratamiento capaz de combatir enfermedades resistentes. El proyecto fue identificado como <strong>VX-13</strong>. Al principio, los resultados parecían prometedores, pero algo salió mal durante las pruebas.
         </p>
         <p>
-          La unión de ambos conceptos simboliza el nacimiento del virus que provoca la infección y transforma a las personas, convirtiéndose en el eje central de la narrativa.
+          La infección comenzó a propagarse dentro del hospital y, en poco tiempo, las instalaciones quedaron completamente aisladas. Los médicos intentaron contenerla pero fue en vano, mientras los supervivientes buscan los materiales necesarios para desarrollar una cura. Sin embargo, el VX-13 no solo se extendía: también había convertido el hospital en un lugar cada vez más peligroso.
+        </p>
+        <p>
+          Ahora, el hospital permanece infectado y dividido entre zonas seguras, áreas contaminadas y habitaciones donde todavía quedan recursos esenciales. Los supervivientes deberán trabajar juntos para reunir los componentes de la cura antes de que la infección se propague por completo.
         </p>
       </section>
 

@@ -32,7 +32,7 @@ export default function RulesModal({ isOpen, onClose }) {
             </h3>
             <ul className="rules-list">
               <li>
-                <strong>Asignación:</strong> Al iniciar, cada jugador escoge una carta al azar para determinar su equipo (Superviviente o Infectado).
+                <strong>Asignación:</strong> Introduce los nombres de los jugadores en esta web. La app asignará al azar los equipos (Superviviente o Infectado).
               </li>
               <li>
                 <strong>Primer Turno:</strong> Todos lanzan el dado. El equipo con el valor más alto inicia la partida, lanzando una vez más para moverse.
